@@ -1,40 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/places.css">
     <title>Document</title>
 </head>
-<body onload="getPosition()">
-    <a href="index.html">Home</a>
 
-    <h2>Current Position:</h2>
-    
-    <table>
-        <tr>
-            <td>Latitude</td>
-            <td id="latitude"></td>
-        </tr>
-        <tr>
-            <td>Longitude</td>
-            <td id="longitude"></td>
-        </tr>
-        <tr>
-            <td>Accuracy</td>
-            <td id="accuracy"></td>
-        </tr>
-        <tr>
-            <td>Timestamp</td>
-            <td id="timestamp"></td>
-        </tr>
-    </table>
+<body onload="getPosition()">
+
+    <!-- <h2>Current Position:</h2>
+        
+        <table>
+            <tr>
+                <td>Latitude</td>
+                <td id="latitude"></td>
+            </tr>
+            <tr>
+                <td>Longitude</td>
+                <td id="longitude"></td>
+            </tr>
+            <tr>
+                <td>Accuracy</td>
+                <td id="accuracy"></td>
+            </tr>
+            <tr>
+                <td>Timestamp</td>
+                <td id="timestamp"></td>
+            </tr>
+        </table> -->
 
     <p id="locationError"></p>
-    <div class="map"></div>
+    <div class="title">
+        <h1>Place Keeper
+            <h2>Find your way back to your Favorite place</h2>
+            <a href="index.html">Home</a>
+            <a href="user-prefs.html">User Settings</a>
+        </h1>
+    </div>
+    <div class="map">
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlvKP2BTs7lMs-hljb4PhFO65Wq0KyinA"></script>
+    </div>
+    <div class="places">
+        <h2>Places</h2>
+        <ul>
+            <li>
+                Yossi's House
+                <button>X</button>
+                <button>GO</button>
+            </li>
+            <li>
+                Pizza Abarbanel
+                <button>X</button>
+                <button>GO</button>
+            </li>
+        </ul>
+    </div>
 
+    <script src="js\services\utils.service.js"></script>
+    <!-- <script src="js\services\user.service.js"></script> -->
+    <script src="js\services\storage.service.js"></script>
+    <!-- <script src="js/services/place.service.js"></script> -->
+    <script src="js\place.controller.js"></script>
+    <!-- <script src="js\home.controller.js"></script> -->
+    <!-- <script src="js\user.controller.js"></script> -->
     <script src="js/services/place.service.js"></script>
-    <script async defer
-    src="https://www.google.com/maps/embed/v1/MAP_MODE?key=AIzaSyDlvKP2BTs7lMs-hljb4PhFO65Wq0KyinA"></script>
 </body>
-</html>
 
+</html>

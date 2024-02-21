@@ -2,6 +2,32 @@
 
 'use strict'
 
+
+
+function getPlaces(){
+
+}
+
+function removePlace(placeId){
+
+}
+
+function addPlace(name, lat, lng, zoom){
+
+}
+
+function getPlaceById(placeId){
+
+}
+
+function _createPlace(name, lat, lng, zoom){
+
+}
+
+function _createPlaces(){
+
+}
+
 function getPosition() {
 
     if (!navigator.geolocation) {
@@ -12,7 +38,8 @@ function getPosition() {
     // One shot position retrieval...
     navigator.geolocation.getCurrentPosition(showLocation, handleLocationError)
     
-
+    // ...or continous watch
+    // navigator.geolocation.watchPosition(showLocation, handleLocationError)
 }
 
 function showLocation(position) {
@@ -20,17 +47,17 @@ function showLocation(position) {
     console.log(position)
     const { latitude: lat, longitude: lng, accuracy } = position.coords
 
-    document.getElementById("latitude").innerHTML = lat
-    document.getElementById("longitude").innerHTML = lng
-    document.getElementById("accuracy").innerHTML = accuracy
+    // document.getElementById("latitude").innerHTML = lat
+    // document.getElementById("longitude").innerHTML = lng
+    // document.getElementById("accuracy").innerHTML = accuracy
 
-    var date = new Date(position.timestamp)
-    document.getElementById("timestamp").innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+    // var date = new Date(position.timestamp)
+    // document.getElementById("timestamp").innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
     
-    initMap(lat, lng)
+    initMap(29.550360, 34.952278)
 }
 
-function initMap(lat = 31, lng = 31) {
+function initMap(lat = 29.550360, lng = 34.952278) {
 
     const elMap = document.querySelector('.map')
     const mapOptions = {

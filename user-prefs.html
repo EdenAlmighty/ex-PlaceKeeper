@@ -3,11 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/places.css">
     <title>Document</title>
 </head>
-<body>
+<body onload="onInit()">
     <a href="index.html">Home</a>
 
-    
+    <form id="userForm" onsubmit="onSubmit(this, event)">
+        <label for="email">Email
+            <input type="email" required name="email" placeholder="Enter Your Email" id="email">
+        </label>
+
+        <label for="age">Age
+            <input type="range" id="age" name="age" step="1" min="13" max="120" value="18"
+            onchange="showAge(this.value)" />
+        </label>
+        
+        <h2>Colors</h2>
+
+        <label for="txtColor">Set Text Color
+            <input type="color" name="txtColor" id="txtColor">
+        </label>
+
+        <label for="bgColor">Set Background Color
+            <input type="color" name="bgColor" id="bgColor">
+        </label>
+
+        <label for="birthDate">Birth Date
+            <input type="date" name="birthDate" id="birthDate">
+        </label>
+
+        <label for="birthTime">Birth Time
+            <input type="time" name="birthTime" id="birthTime">
+        </label>
+
+        <button>Set</button>
+    </form>
+
+    <script src="js\services\utils.service.js"></script>
+    <script src="js\services\user.service.js"></script>
+    <script src="js\services\storage.service.js"></script>
+    <!-- <script src="js/services/place.service.js"></script> -->
+    <!-- <script src="js\place.controller.js"></script> -->
+    <!-- <script src="js\home.controller.js"></script> -->
+    <script src="js\user.controller.js"></script>
 </body>
 </html>
