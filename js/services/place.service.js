@@ -12,8 +12,7 @@ function getPosition() {
     // One shot position retrieval...
     navigator.geolocation.getCurrentPosition(showLocation, handleLocationError)
     
-    // ...or continous watch
-    // navigator.geolocation.watchPosition(showLocation, handleLocationError)
+
 }
 
 function showLocation(position) {
