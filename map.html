@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="getPosition()">
+    <a href="index.html">Home</a>
+
+    <h2>Current Position:</h2>
+    
+    <table>
+        <tr>
+            <td>Latitude</td>
+            <td id="latitude"></td>
+        </tr>
+        <tr>
+            <td>Longitude</td>
+            <td id="longitude"></td>
+        </tr>
+        <tr>
+            <td>Accuracy</td>
+            <td id="accuracy"></td>
+        </tr>
+        <tr>
+            <td>Timestamp</td>
+            <td id="timestamp"></td>
+        </tr>
+    </table>
+
+    <p id="locationError"></p>
+    <div class="map"></div>
+
+    <script src="js/services/place.service.js"></script>
+    <script async defer
+    src="https://www.google.com/maps/embed/v1/MAP_MODE?key=AIzaSyDlvKP2BTs7lMs-hljb4PhFO65Wq0KyinA"></script>
+</body>
+</html>
+
